@@ -1,3 +1,56 @@
 site_name: My Docs
+
+repo_url: https://github.com/chuyanbo/MKdocstest.github.io
+repo_name: MKdocstest
+
 theme:
   name: material
+  custom_dir: overrides
+  language: zh
+  icon:
+    logo: material/file-document
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      toggle:
+        icon: material/brightness-4
+        name: dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      toggle:
+        icon: material/brightness-7
+        name: light mode
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation
+    - navigation.top
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页:
+      - 欢迎: "index.md"
